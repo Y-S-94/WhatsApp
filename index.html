@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Yousef Z. A. Shaheen — Version 11 | Engineering Elegance</title>
+  
+  <!-- SEO & Luxury Branding Meta -->
+  <meta name="description" content="Yousef Z. A. Shaheen يجسّد Engineering Elegance: قوة تقنية بلا خشونة، وأناقة برمجية بلا تفريط في الأداء. النسخة الرسمية الحادية عشرة.">
+  <meta name="keywords" content="Yousef Shaheen, Engineering Elegance, Luxury Digital Identity, Master Developer, Digital Architect">
+  <meta name="author" content="Yousef Z. A. Shaheen">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yousef Z. A. Shaheen — Version 11 | Engineering Elegance">
+  <meta property="og:description" content="قوة تقنية بلا خشونة، وأناقة برمجية بلا تفريط في الأداء. تواصل معي مباشرة عبر واتساب.">
+  <meta property="og:image" content="https://i.postimg.cc/hjdYxv6g/Picsart-26-10-29-05-15-25-658.jpg">
+  <meta property="og:url" content="https://wa.link/lc6f5w">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yousef Z. A. Shaheen — Engineering Elegance">
+  <meta name="twitter:description" content="الهوية الرقمية الفاخرة للابتكار البرمجي والتصميم الهندسي الراقي.">
+  <meta name="twitter:image" content="https://i.postimg.cc/hjdYxv6g/Picsart-26-10-29-05-15-25-658.jpg">
+
+  <!-- Luxury Monogram Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050505'/><path d='M30 25 L50 65 L70 25 M50 65 L50 85' stroke='%23E0A21B' stroke-width='8' fill='none' stroke-linecap='round'/></svg>">
+
+  <!-- Google Typography Engine (Cinzel for Luxury Serif, Plus Jakarta Sans, and Cairo for Arabic Elegance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       01. ULTRA-LUXURY DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-obsidian: #050505;
+      --bg-charcoal: #0B0B0D;
+      --bg-card: rgba(18, 18, 20, 0.75);
+      --bg-card-hover: rgba(26, 26, 30, 0.9);
+      
+      --gold-primary: #E0A21B;
+      --gold-light: #F5D47A;
+      --gold-deep: #996515;
+      --gold-glow: rgba(224, 162, 27, 0.35);
+      
+      --titanium-silver: #D9D9D9;
+      --platinum-muted: #8E8E93;
+      --cyber-purple: #8B5CF6;
+      --cyber-pink: #EC4899;
+      
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(224, 162, 27, 0.4);
+      
+      --font-serif: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-arabic: 'Cairo', sans-serif;
+      
+      --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: all 0.5s var(--ease-cinematic);
+    }
+
+    /* Reset & Base Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg-obsidian);
+      color: var(--titanium-silver);
+      font-family: var(--font-arabic), var(--font-sans);
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+      selection-background-color: var(--gold-primary);
+      selection-color: #000;
+    }
+
+    ::selection {
+      background: var(--gold-primary);
+      color: #050505;
+    }
+
+    /* Subtle Animated Film Grain Background */
+    .film-grain {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.025;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Canvas for Golden Dust Particles */
+    #ambient-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Interactive Spotlight Following Cursor */
+    .cursor-spotlight {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(224, 162, 27, 0.06) 0%, rgba(139, 92, 246, 0.02) 40%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      transition: opacity 0.5s ease;
+      will-change: transform;
+    }
+
+    /* Container */
+    .luxury-container {
+      width: 100%;
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ==========================================================================
+       02. CINEMATIC TYPOGRAPHY & TEXT FLOW
+       ========================================================================== */
+    .font-eng {
+      font-family: var(--font-sans);
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .font-cinzel {
+      font-family: var(--font-serif);
+      letter-spacing: 0.15em;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF1C5 0%, #F5D47A 30%, #E0A21B 70%, #996515 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #E0A21B 0%, #FFFFFF 50%, #E0A21B 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 6s linear infinite;
+    }
+
+    @keyframes textShimmer {
+      to { background-position: 200% center; }
+    }
+
+    /* ==========================================================================
+       03. LUXURY BADGES & CHIPS
+       ========================================================================== */
+    .badge-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      background: rgba(224, 162, 27, 0.08);
+      border: 1px solid rgba(224, 162, 27, 0.3);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(224, 162, 27, 0.12);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 10px #10B981;
+      animation: pulseGreen 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.5; }
+    }
+
+    .titanium-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--titanium-silver);
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+    }
+
+    /* ==========================================================================
+       04. NAVIGATION BAR (FLOATING OBSIDIAN GLASS)
+       ========================================================================== */
+    .nav-floating {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1100px;
+      padding: 0.8rem 1.6rem;
+      background: rgba(10, 10, 12, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      transition: var(--transition-smooth);
+    }
+
+    .nav-floating.scrolled {
+      background: rgba(5, 5, 5, 0.9);
+      border-color: rgba(224, 162, 27, 0.25);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(224, 162, 27, 0.1);
+    }
+
+    .brand-monogram {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .monogram-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #2A2A2E, #0A0A0A);
+      border: 1px solid rgba(224, 162, 27, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      box-shadow: 0 0 15px rgba(224, 162, 27, 0.2);
+    }
+
+    .monogram-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+    }
+
+    /* ==========================================================================
+       05. PRIMARY WHATSAPP MAGNETIC BUTTON (CTA)
+       ========================================================================== */
+    .whatsapp-master-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      padding: 1.1rem 2.4rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #050505;
+      background: linear-gradient(135deg, #FFF2CE 0%, #F5D47A 35%, #E0A21B 70%, #C4870B 100%);
+      box-shadow: 0 10px 30px rgba(224, 162, 27, 0.35), 0 0 45px rgba(224, 162, 27, 0.2);
+      transition: all 0.4s var(--ease-cinematic);
+      overflow: hidden;
+      cursor: pointer;
+      border: none;
+      z-index: 10;
+    }
+
+    .whatsapp-master-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+      transition: 0.6s ease;
+    }
+
+    .whatsapp-master-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 45px rgba(224, 162, 27, 0.5), 0 0 60px rgba(224, 162, 27, 0.35);
+      color: #000;
+    }
+
+    .whatsapp-master-btn:hover::before {
+      left: 100%;
+    }
+
+    .whatsapp-icon-svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      transition: transform 0.4s var(--ease-cinematic);
+    }
+
+    .whatsapp-master-btn:hover .whatsapp-icon-svg {
+      transform: scale(1.15) rotate(8deg);
+    }
+
+    /* Small Navbar WhatsApp CTA */
+    .nav-cta {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.8rem;
+      border-radius: 100px;
+      background: rgba(224, 162, 27, 0.15);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-primary);
+      color: #050505;
+      box-shadow: 0 0 20px var(--gold-glow);
+    }
+
+    /* ==========================================================================
+       06. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding-top: 9.5rem;
+      padding-bottom: 5rem;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-pretitle {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-subtitle-en {
+      font-size: 1.25rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-family: var(--font-serif);
+      color: var(--gold-light);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .hero-subtitle-en::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(224, 162, 27, 0.4), transparent);
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: #B5B5BE;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+      max-width: 620px;
+      text-align: justify;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .secondary-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.05rem 1.8rem;
+      border-radius: 100px;
+      text-decoration: none;
+      color: var(--titanium-silver);
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      backdrop-filter: blur(10px);
+      transition: var(--transition-smooth);
+    }
+
+    .secondary-link-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(224, 162, 27, 0.4);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       07. ADVANCED LUXURY IMAGE PRESENTATION SYSTEMS (THE 5 STYLES)
+       ========================================================================== */
+
+    /* A. Frosted Obsidian Glassmorphic Frame (Hero Master Image) */
+    .frosted-obsidian-card {
+      position: relative;
+      border-radius: 28px;
+      padding: 14px;
+      background: linear-gradient(145deg, rgba(30, 30, 35, 0.6) 0%, rgba(10, 10, 12, 0.9) 100%);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(224, 162, 27, 0.15);
+      transition: transform 0.4s var(--ease-cinematic), box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .frosted-obsidian-card:hover {
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9), 0 0 60px rgba(224, 162, 27, 0.25);
+    }
+
+    .inner-image-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: #000;
+    }
+
+    .inner-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.8s var(--ease-cinematic), filter 0.5s ease;
+      display: block;
+    }
+
+    .frosted-obsidian-card:hover .inner-image-wrap img {
+      transform: scale(1.04);
+    }
+
+    /* Liquid Gold Rotating Border */
+    .liquid-gold-glow {
+      position: absolute;
+      inset: -2px;
+      border-radius: 30px;
+      background: conic-gradient(from 0deg, transparent 0%, var(--gold-primary) 25%, transparent 50%, var(--gold-light) 75%, transparent 100%);
+      z-index: -1;
+      animation: rotateBorder 12s linear infinite;
+      opacity: 0.85;
+    }
+
+    @keyframes rotateBorder {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Architectural Metadata Stamp on Hero Image */
+    .stamp-overlay {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      left: 24px;
+      padding: 1rem 1.2rem;
+      background: rgba(10, 10, 14, 0.82);
+      backdrop-filter: blur(16px);
+      border-radius: 16px;
+      border: 1px solid rgba(224, 162, 27, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .stamp-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .stamp-subtitle {
+      font-size: 0.7rem;
+      color: var(--gold-light);
+      font-family: var(--font-sans);
+      letter-spacing: 0.05em;
+    }
+
+    /* ==========================================================================
+       08. LUXURY VISUAL GALLERY (GRID SYSTEM WITH THE 5 STYLES)
+       ========================================================================== */
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      display: block;
+      font-family: var(--font-sans);
+    }
+
+    .section-headline {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtext {
+      max-width: 600px;
+      margin: 0.8rem auto 0;
+      color: var(--platinum-muted);
+      font-size: 1rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    /* Gallery Card Generic Base */
+    .gallery-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.5s var(--ease-cinematic);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* Image Box wrapper inside cards */
+    .card-media {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-cinematic);
+      display: block;
+    }
+
+    .gallery-card:hover .card-media img {
+      transform: scale(1.06);
+    }
+
+    /* Style B: Liquid Gold Border Highlight (Card 1) */
+    .style-liquid-gold {
+      grid-column: span 7;
+      height: 480px;
+      padding: 3px;
+      background: linear-gradient(135deg, rgba(224, 162, 27, 0.8) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(245, 212, 122, 0.7) 100%);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(224, 162, 27, 0.15);
+    }
+
+    .style-liquid-gold .card-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 21px;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+    }
+
+    /* Style C: Cyberpunk Cyber-Glow Shell (Card 2) */
+    .style-cyber-glow {
+      grid-column: span 5;
+      height: 480px;
+      border-radius: 24px;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--cyber-purple), var(--cyber-pink), var(--gold-primary));
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(139, 92, 246, 0.25);
+    }
+
+    .style-cyber-glow .card-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #0A0A0E;
+      position: relative;
+    }
+
+    /* Style D: Titanium Brushed Border (Card 3) */
+    .style-titanium-brushed {
+      grid-column: span 6;
+      height: 440px;
+      background: linear-gradient(145deg, #3A3A40, #18181B, #2C2C32);
+      padding: 10px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      position: relative;
+    }
+
+    /* Titanium Industrial Rivets / Screws */
+    .screw {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #D1D1D6, #636366);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+    }
+    .screw-tl { top: 10px; left: 10px; }
+    .screw-tr { top: 10px; right: 10px; }
+    .screw-bl { bottom: 10px; left: 10px; }
+    .screw-br { bottom: 10px; right: 10px; }
+
+    .style-titanium-brushed .card-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    /* Style E: VIP Holographic Enclosure (Card 4) */
+    .style-vip-holographic {
+      grid-column: span 6;
+      height: 440px;
+      border-radius: 24px;
+      padding: 3px;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(224, 162, 27, 0.5), rgba(139, 92, 246, 0.5), rgba(245, 212, 122, 0.3));
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(245, 212, 122, 0.2);
+    }
+
+    .style-vip-holographic .card-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 21px;
+      overflow: hidden;
+      background: #08080A;
+      position: relative;
+    }
+
+    /* Card Floating Labels */
+    .card-badge-label {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      background: rgba(5, 5, 8, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      z-index: 5;
+    }
+
+    .card-caption-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2.5rem 1.8rem 1.4rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+      z-index: 4;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .caption-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.25rem;
+    }
+
+    .caption-tag {
+      font-size: 0.75rem;
+      color: var(--gold-light);
+      font-family: var(--font-sans);
+      letter-spacing: 0.05em;
+    }
+
+    .expand-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      backdrop-filter: blur(8px);
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-card:hover .expand-btn {
+      background: var(--gold-primary);
+      border-color: var(--gold-primary);
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    /* ==========================================================================
+       09. ENGINEERING ELEGANCE PHILOSOPHY & PILLARS
+       ========================================================================== */
+    .philosophy-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .manifesto-panel {
+      background: linear-gradient(135deg, rgba(18, 18, 22, 0.8) 0%, rgba(10, 10, 12, 0.95) 100%);
+      border: 1px solid rgba(224, 162, 27, 0.25);
+      border-radius: 32px;
+      padding: 3.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.9);
+    }
+
+    .manifesto-panel::before {
+      content: '11';
+      position: absolute;
+      top: -20px;
+      right: 20px;
+      font-size: 16rem;
+      font-weight: 900;
+      font-family: var(--font-serif);
+      color: rgba(224, 162, 27, 0.03);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .manifesto-quote {
+      font-size: clamp(1.3rem, 2.3vw, 1.9rem);
+      line-height: 1.7;
+      font-weight: 600;
+      color: #F0F0F5;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      margin-top: 3.5rem;
+    }
+
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 2rem 1.6rem;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .pillar-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(224, 162, 27, 0.4);
+      transform: translateY(-5px);
+    }
+
+    .pillar-number {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .pillar-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar-desc {
+      font-size: 0.9rem;
+      color: var(--platinum-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       10. WHATSAPP VIP CONTACT & QR HOLOGRAPHIC ENCLOSURE
+       ========================================================================== */
+    .contact-section {
+      padding: 5rem 0 7rem;
+      position: relative;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    /* VIP Holographic QR Showcase Card */
+    .vip-qr-stage {
+      position: relative;
+      padding: 2.5rem;
+      border-radius: 36px;
+      background: linear-gradient(145deg, rgba(22, 22, 26, 0.9), rgba(8, 8, 10, 0.95));
+      border: 1px solid rgba(224, 162, 27, 0.35);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9), 0 0 60px rgba(224, 162, 27, 0.15);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Rotating laser sweep over card */
+    .qr-laser-sweep {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), #fff, var(--gold-primary), transparent);
+      box-shadow: 0 0 15px var(--gold-primary);
+      animation: laserScan 4s ease-in-out infinite;
+      z-index: 10;
+      opacity: 0.7;
+    }
+
+    @keyframes laserScan {
+      0%, 100% { top: 10%; opacity: 0; }
+      50% { top: 85%; opacity: 1; }
+    }
+
+    .qr-frame-outer {
+      position: relative;
+      display: inline-block;
+      padding: 18px;
+      background: #FFFFFF;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(224, 162, 27, 0.3);
+      margin-bottom: 1.8rem;
+    }
+
+    .qr-code-img {
+      width: 230px;
+      height: 230px;
+      object-fit: contain;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .qr-instruction-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+
+    .qr-instruction-desc {
+      font-size: 0.95rem;
+      color: var(--platinum-muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .contact-details-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .contact-card-info {
+      padding: 1.6rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .contact-card-info:hover {
+      border-color: rgba(224, 162, 27, 0.4);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .contact-info-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-light);
+      margin-bottom: 0.4rem;
+      font-family: var(--font-sans);
+    }
+
+    .contact-info-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      direction: ltr;
+      text-align: right;
+    }
+
+    /* ==========================================================================
+       11. LUXURY LIGHTBOX MODAL (FOR FULLSCREEN IMAGE INSPECTION)
+       ========================================================================== */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 8, 0.94);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s var(--ease-cinematic);
+    }
+
+    .lightbox-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-content-box {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      max-height: 88vh;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(224, 162, 27, 0.4);
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.95), 0 0 50px rgba(224, 162, 27, 0.2);
+      transform: scale(0.92);
+      transition: transform 0.4s var(--ease-cinematic);
+    }
+
+    .lightbox-modal.active .lightbox-content-box {
+      transform: scale(1);
+    }
+
+    .lightbox-img {
+      width: 100%;
+      height: 100%;
+      max-height: 88vh;
+      object-fit: contain;
+      background: #000;
+      display: block;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(10, 10, 12, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.4rem;
+      transition: var(--transition-smooth);
+      z-index: 10;
+    }
+
+    .lightbox-close:hover {
+      background: var(--gold-primary);
+      color: #000;
+      transform: rotate(90deg);
+    }
+
+    /* ==========================================================================
+       12. CINEMATIC FOOTER
+       ========================================================================== */
+    .luxury-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4rem 0 3rem;
+      background: #040405;
+      position: relative;
+      z-index: 10;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-signature {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-version {
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+    }
+
+    .back-to-top {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      color: var(--titanium-silver);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .back-to-top:hover {
+      background: var(--gold-primary);
+      color: #000;
+      border-color: var(--gold-primary);
+      transform: translateY(-4px);
+    }
+
+    /* ==========================================================================
+       13. RESPONSIVE ARCHITECTURE & MEDIA QUERIES
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3.5rem;
+      }
+      .hero-pretitle, .hero-actions {
+        justify-content: center;
+      }
+      .hero-subtitle-en::after {
+        display: none;
+      }
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      .frosted-obsidian-card {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .style-liquid-gold, .style-cyber-glow, .style-titanium-brushed, .style-vip-holographic {
+        grid-column: span 12;
+        height: 420px;
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-floating {
+        width: 94%;
+        padding: 0.7rem 1.2rem;
+      }
+      .monogram-text {
+        display: none;
+      }
+      .hero-title {
+        font-size: 2.3rem;
+      }
+      .manifesto-panel {
+        padding: 2rem 1.4rem;
+      }
+      .whatsapp-master-btn {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+      .secondary-link-btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .qr-frame-outer {
+        padding: 12px;
+      }
+      .qr-code-img {
+        width: 190px;
+        height: 190px;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* Accessibility Reduced Motion Support */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .cursor-spotlight {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Film Grain Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Ambient Golden Dust Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Interactive Dynamic Spotlight Follower -->
+  <div class="cursor-spotlight" id="cursor-spotlight" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       FLOATING NAVIGATION BAR
+       ========================================================================== -->
+  <header>
+    <nav class="nav-floating" id="navbar">
+      <a href="#hero" class="brand-monogram" aria-label="الصفحة الرئيسية">
+        <div class="monogram-icon">YZS</div>
+        <span class="monogram-text">Yousef Shaheen</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <div class="badge-wrapper" style="padding: 0.3rem 0.8rem; font-size: 0.7rem;">
+          <span class="pulse-dot"></span>
+          <span>ONLINE</span>
+        </div>
+
+        <a href="https://wa.link/lc6f5w" target="_blank" rel="noopener noreferrer" class="nav-cta" aria-label="واتساب">
+          <svg class="whatsapp-icon-svg" style="width: 16px; height: 16px;" viewBox="0 0 24 24">
+            <path d="M12.031 2C6.494 2 2 6.49 2 12.022c0 1.986.58 3.842 1.583 5.418L2.17 22l4.743-1.378a9.98 9.98 0 005.118 1.4c5.536 0 10.03-4.49 10.03-10.022C22.061 6.49 17.567 2 12.031 2zm0 18.257a8.214 8.214 0 01-4.22-1.164l-.303-.18-3.136.912.93-3.053-.198-.315a8.216 8.216 0 01-1.264-4.435c0-4.549 3.702-8.249 8.254-8.249 4.551 0 8.253 3.7 8.253 8.249 0 4.55-3.702 8.235-8.316 8.235zm4.526-6.177c-.248-.124-1.467-.724-1.695-.807-.228-.083-.394-.124-.56.124-.166.248-.642.807-.787.973-.145.166-.29.186-.538.062-.248-.124-1.048-.387-1.996-1.233-.738-.658-1.236-1.472-1.381-1.72-.145-.248-.016-.382.108-.506.112-.111.248-.29.373-.435.124-.145.166-.248.248-.414.083-.166.042-.311-.02-.435-.063-.124-.56-1.35-.767-1.848-.202-.486-.407-.42-.56-.428-.145-.008-.311-.01-.477-.01-.166 0-.435.062-.663.311-.228.248-.87 1.006-.87 2.454 0 1.448 1.054 2.85 1.2 3.047.145.197 2.074 3.167 5.024 4.44.702.304 1.25.486 1.677.622.705.225 1.346.193 1.854.117.566-.085 1.467-.6 1.674-1.18.207-.58.207-1.077.145-1.18-.062-.103-.228-.165-.476-.289z"/>
+          </svg>
+          <span>تواصل</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         01. CINEMATIC HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="luxury-container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-text-col">
+            <div class="hero-pretitle">
+              <span class="badge-wrapper">OFFICIAL BRAND IDENTITY</span>
+              <span class="titanium-badge">VERSION 11</span>
+              <span class="titanium-badge">VIP STATUS</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="shimmer-text">Yousef Z. A. Shaheen</span>
+            </h1>
+
+            <div class="hero-subtitle-en">
+              <span>Engineering Elegance</span>
+            </div>
+
+            <p class="hero-description">
+              <strong>Yousef Z. A. Shaheen</strong> يجسّد <em>Engineering Elegance</em>: قوة تقنية بلا خشونة، وأناقة برمجية بلا تفريط في الأداء. يكتب الكود كما يُصمّم طرازاً فاخراً—كل تفصيل له وظيفة، وكل وظيفة لها إحساس بالجودة. النتيجة: منتجات رقمية صلبة، سلسة، وراقية عالمياً.
+            </p>
+
+            <div class="hero-actions">
+              <!-- Primary WhatsApp Action -->
+              <a href="https://wa.link/lc6f5w" target="_blank" rel="noopener noreferrer" class="whatsapp-master-btn" id="hero-wa-btn">
+                <svg class="whatsapp-icon-svg" viewBox="0 0 24 24">
+                  <path d="M12.031 2C6.494 2 2 6.49 2 12.022c0 1.986.58 3.842 1.583 5.418L2.17 22l4.743-1.378a9.98 9.98 0 005.118 1.4c5.536 0 10.03-4.49 10.03-10.022C22.061 6.49 17.567 2 12.031 2zm0 18.257a8.214 8.214 0 01-4.22-1.164l-.303-.18-3.136.912.93-3.053-.198-.315a8.216 8.216 0 01-1.264-4.435c0-4.549 3.702-8.249 8.254-8.249 4.551 0 8.253 3.7 8.253 8.249 0 4.55-3.702 8.235-8.316 8.235zm4.526-6.177c-.248-.124-1.467-.724-1.695-.807-.228-.083-.394-.124-.56.124-.166.248-.642.807-.787.973-.145.166-.29.186-.538.062-.248-.124-1.048-.387-1.996-1.233-.738-.658-1.236-1.472-1.381-1.72-.145-.248-.016-.382.108-.506.112-.111.248-.29.373-.435.124-.145.166-.248.248-.414.083-.166.042-.311-.02-.435-.063-.124-.56-1.35-.767-1.848-.202-.486-.407-.42-.56-.428-.145-.008-.311-.01-.477-.01-.166 0-.435.062-.663.311-.228.248-.87 1.006-.87 2.454 0 1.448 1.054 2.85 1.2 3.047.145.197 2.074 3.167 5.024 4.44.702.304 1.25.486 1.677.622.705.225 1.346.193 1.854.117.566-.085 1.467-.6 1.674-1.18.207-.58.207-1.077.145-1.18-.062-.103-.228-.165-.476-.289z"/>
+                </svg>
+                <span>راسلني على واتساب</span>
+              </a>
+
+              <!-- Secondary Jump to QR -->
+              <a href="#qr-section" class="secondary-link-btn">
+                <span>مسح الرمز (QR Code)</span>
+                <span style="font-size: 1.1rem;">↓</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Image Showcase (Style A: Frosted Obsidian Glassmorphic Frame) -->
+          <div class="hero-image-col">
+            <div class="frosted-obsidian-card tilt-card" data-tilt>
+              <div class="liquid-gold-glow"></div>
+              
+              <div class="inner-image-wrap">
+                <img 
+                  src="https://i.postimg.cc/hjdYxv6g/Picsart-26-10-29-05-15-25-658.jpg" 
+                  alt="Yousef Z. A. Shaheen — Luxury Identity"
+                  loading="eager"
+                  decoding="async"
+                >
+              </div>
+
+              <!-- Stamp Overlay -->
+              <div class="stamp-overlay">
+                <div>
+                  <div class="stamp-title">MASTER IDENTITY</div>
+                  <div class="stamp-subtitle">EDITION 11 · 2026</div>
+    </div>
